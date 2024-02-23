@@ -80,3 +80,7 @@ input {
 .guesses {
   background-color: #5d5f61;
 }
+
+#newGame {
+  cursor: pointer;
+}
