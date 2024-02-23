@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #1e2124;
+  font-family: poppins;
+  color: white;
+  font-size: 22px;
+}
+
+form {
+  text-align: center;
+  padding: 35px;
+}
+
+button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 35px;
+  width: 100px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input {
+  margin-left: 10px;
+  height: 35px;
+  width: 80px;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+h2 {
+  background-color: crimson;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+#weight-guide {
+  color: green;
+}

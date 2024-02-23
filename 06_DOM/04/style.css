@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #1e2124;
+  font-family: poppins;
+  color: #fff;
+}
+
+ul {
+  display: flex;
+  gap: 15px;
+  flex-flow: wrap;
+}
+
+li {
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-color: #0c0c0c;
+  border-radius: 80px;
+  justify-content: center;
+  align-items: center;
+  color: #14edd8;
+  font-size: 20px;
+  border: 2px solid;
+}
