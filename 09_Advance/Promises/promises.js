@@ -84,11 +84,19 @@
 
 // consumePromiseFive()
 
-(async function () {
-    let url = "https://randomuser.me/api/"
-    let response = await fetch(url)
-    let data = await response.json()
-    const { first } = data.results[0].name
-    const { last } = data.results[0].name
-    console.log(`${first} ${last}`);
-})()
+// (async function () {
+//     let url = "https://randomuser.me/api/"
+//     let response = await fetch(url)
+//     let data = await response.json()
+//     const { first } = data.results[0].name
+//     const { last } = data.results[0].name
+//     console.log(`${first} ${last}`);
+// })()
+
+fetch('https://randomuser.me/api/')
+    .then((response) => {
+        return response.json()
+    })
+    .then((data) => {
+        console.log(data)
+    })
