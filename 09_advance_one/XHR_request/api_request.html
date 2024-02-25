@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XMLHttpRequest</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">What is XHR?</h1>
+      <p class="para">
+        (XHR) objects are used to interact with servers. You can retrieve data
+        from a URL without having to do a full page refresh. This enables a Web
+        page to update just part of a page without disrupting what the user is
+        doing.
+      </p>
+    </div>
+    <div class="box"></div>
+    <script>
+      const xhr = new XMLHttpRequest();
+      const reqURL = "https://api.github.com/users/beaterofficial01";
+
+      xhr.open("GET", reqURL);
+      xhr.send();
+      xhr.onreadystatechange = function API() {
+        // console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+          const box = document.querySelector(".box");
+          const data = JSON.parse(this.responseText);
+          console.log(data);
+          box.innerHTML = `
+          <div id="card">
+        <h1 class="name">${data.login ?? "API Error"}</h1>
+        <div class="image-crop">
+            <img id="avatar" src="${
+              data.avatar_url ??
+              "https://avatars.githubusercontent.com/u/157041423?v=4"
+            }"></img>
+        </div>
+        <div id="stats">
+            <div class="col">
+                <p class="stat">${data.public_repos ?? 0}</p>
+                <p class="label">repos</p>
+            </div>
+                    <div class="col">
+                <p class="stat">${data.followers ?? 0}</p>
+                <p class="label">Followers</p>
+            </div>
+                    <div class="col">
+                <p class="stat">${data.following ?? 0}</p>
+                <p class="label">Following</p>
+            </div>
+        </div>
+        <div id="buttons">
+            <button><a href="${data.html_url}">Follow</a></button>
+            <button id="msg">Message</button>
+        </div>
+    </div>`;
+        }
+      };
+    </script>
+  </body>
+</html>
