@@ -62,24 +62,33 @@
 //     })
 
 
-const promiseFive = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        let error = false
-        if (!error) {
-            resolve({ username: 'JavaScript', password: 1234 })
-        } else {
-            reject('ERROR: JS went wrong')
-        }
-    }, 1000);
-})
+// const promiseFive = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let error = false
+//         if (!error) {
+//             resolve({ username: 'JavaScript', password: 1234 })
+//         } else {
+//             reject('ERROR: JS went wrong')
+//         }
+//     }, 1000);
+// })
 
-async function consumePromiseFive() {
-    try {
-        const response = await promiseFive
-        console.log(promiseFive);
-    } catch (error) {
-        console.log(error);
-    }
-}
+// async function consumePromiseFive() {
+//     try {
+//         const response = await promiseFive
+//         console.log(promiseFive);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
-consumePromiseFive()
+// consumePromiseFive()
+
+(async function () {
+    let url = "https://randomuser.me/api/"
+    let response = await fetch(url)
+    let data = await response.json()
+    const { first } = data.results[0].name
+    const { last } = data.results[0].name
+    console.log(`${first} ${last}`);
+})()
