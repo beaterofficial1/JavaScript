@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Roboto;
+  color: #fff;
+  background-color: #45046a;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  background-color: #5c2a9d;
+  padding: 15px;
+  background: rgb(98 208 226 / 6%);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.8px);
+  -webkit-backdrop-filter: blur(4.8px);
+  border: 1px solid rgba(255, 255, 255, 0.29);
+}
+
+li {
+  font-size: 22px;
+  list-style: auto;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.8px);
+  -webkit-backdrop-filter: blur(4.8px);
+  border: 1px solid rgba(255, 255, 255, 0.29);
+  transition: all ease 1s;
+}
+
+.container {
+  padding: 5px;
+}
+
+img {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 130%;
+  filter: brightness(0.5);
+  filter: opacity(0.5);
+}
+
+.btn {
+  position: relative;
+  font-size: 25px;
+  list-style: auto;
+  padding: 15px;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 30px rgb(43 202 195 / 10%);
+  backdrop-filter: blur(4.8px);
+  border: 1px solid rgba(255, 255, 255, 0.29);
+  color: #08deca;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: rgb(61 141 190 / 6%);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+h2 {
+  padding: 15px;
+  margin: 10px;
+  /* box-shadow: 0 4px 30px rgb(43 202 195 / 10%); */
+  backdrop-filter: blur(4.8px);
+  /* border: 1px solid rgba(255, 255, 255, 0.29); */
+}
