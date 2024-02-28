@@ -147,6 +147,7 @@ function randomFact() {
 document.querySelector('.btn').addEventListener('click', randomFact)
 window.addEventListener('load', randomFact)
 window.addEventListener('keydown', (e) => {
+    e.preventDefault()
     if (e.keyCode === 32) {
         randomFact()
     } else return;
