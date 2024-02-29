@@ -11,7 +11,6 @@
 //     console.log("Promise consumed");
 // })
 
-
 // new Promise((resolve, reject) => {
 //     setTimeout(function () {
 //         console.log("Async task 2");
@@ -20,7 +19,6 @@
 // }).then(function () {
 //     console.log("Asyn 2 resolved");
 // })
-
 
 // const promiseThree = new Promise((resolve, reject) => {
 //     setTimeout(function () {
@@ -61,7 +59,6 @@
 //         console.log("The Promise is either resolved or rejected");
 //     })
 
-
 // const promiseFive = new Promise((resolve, reject) => {
 //     setTimeout(() => {
 //         let error = false
@@ -93,10 +90,48 @@
 //     console.log(`${first} ${last}`);
 // })()
 
-fetch('https://randomuser.me/api/')
-    .then((response) => {
-        return response.json()
-    })
-    .then((data) => {
-        console.log(data)
-    })
+// fetch('https://randomuser.me/api/')
+//     .then((response) => {
+//         return response.json()
+//     })
+//     .then((data) => {
+//         console.log(data)
+//     })
+
+// new Promise((resolve, reject) => {
+//   const response = fetch("https://randomuser.me/api/");
+//   resolve(response);
+// })
+//   .then((data) => {})
+//   .then((a) => {
+//     console.log(a);
+//   });
+
+// function getRandomNumber(min, max) {
+//   return new Promise((resolve, reject) => {
+//     if (typeof min !== "number" || typeof max !== "number") {
+//       reject(new Error("Both min and max must be numbers"));
+//     } else if (min >= max) {
+//       reject(new Error("Min must be less than max"));
+//     } else {
+//       const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+//       resolve(randomNumber);
+//     }
+//   });
+// }
+
+// // Function to generate random number every 3 seconds
+// function generateRandomNumberEvery3Seconds() {
+//   setInterval(() => {
+//     getRandomNumber(1, 100)
+//       .then((number) => {
+//         console.log("Random number:", number);
+//       })
+//       .catch((error) => {
+//         console.error("Error:", error.message);
+//       });
+//   }, 3000); // 3 seconds in milliseconds
+// }
+
+// // Call the function to start generating random numbers
+// generateRandomNumberEvery3Seconds();
