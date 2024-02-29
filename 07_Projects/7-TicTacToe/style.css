@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #262b35;
+  color: #fff;
+  font-family: poppins;
+  transition: 2s all ease;
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+.box {
+  width: 18vmin;
+  height: 18vmin;
+  font-size: 60px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: #ea2e2e;
+  font-weight: 800;
+}
+
+#reset {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  background-color: black;
+  cursor: pointer;
+}
+
+.msg-title {
+  font-size: 45px;
+}
+
+.errorField {
+  background-color: rgb(20, 220, 173);
+  font-size: 25px;
+  border-bottom: 5px solid rgb(14, 14, 12);
+  color: black;
+}
+
+.message-field {
+  color: #fff;
+  border-bottom: 5px solid cyan;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background-color: black;
+  flex-direction: column;
+}
+
+.newgame {
+  font-size: 28px;
+  border: none;
+  border-radius: 5px;
+  background-color: cyan;
+  color: black;
+  padding: 10px;
+  /* outline: 2px solid white; */
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
+
+.winner {
+  color: cyan;
+}
