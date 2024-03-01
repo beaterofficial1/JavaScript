@@ -98,14 +98,14 @@
 //         console.log(data)
 //     })
 
-// new Promise((resolve, reject) => {
-//   const response = fetch("https://randomuser.me/api/");
-//   resolve(response);
-// })
-//   .then((data) => {})
-//   .then((a) => {
-//     console.log(a);
-//   });
+new Promise((resolve, reject) => {
+  const response = fetch("https://randomuser.me/api/");
+  resolve(response);
+})
+  .then((data) => {})
+  .then((a) => {
+    console.log(a);
+  });
 
 // function getRandomNumber(min, max) {
 //   return new Promise((resolve, reject) => {
@@ -120,18 +120,18 @@
 //   });
 // }
 
-// // Function to generate random number every 3 seconds
-// function generateRandomNumberEvery3Seconds() {
-//   setInterval(() => {
-//     getRandomNumber(1, 100)
-//       .then((number) => {
-//         console.log("Random number:", number);
-//       })
-//       .catch((error) => {
-//         console.error("Error:", error.message);
-//       });
-//   }, 3000); // 3 seconds in milliseconds
-// }
+// Function to generate random number every 3 seconds
+function generateRandomNumberEvery3Seconds() {
+  setInterval(() => {
+    getRandomNumber(1, 100)
+      .then((number) => {
+        console.log("Random number:", number);
+      })
+      .catch((error) => {
+        console.error("Error:", error.message);
+      });
+  }, 3000); // 3 seconds in milliseconds
+}
 
 // // Call the function to start generating random numbers
 // generateRandomNumberEvery3Seconds();
